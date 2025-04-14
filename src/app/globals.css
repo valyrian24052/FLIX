@@ -21,7 +21,7 @@ body {
 }
 
 input[type="range"] {
-  accent-color: #60a5fa; /* Tailwind blue-400 for sliders */
+  accent-color: #b6b8bb; /* Tailwind blue-400 for sliders */
 }
 
 button {
