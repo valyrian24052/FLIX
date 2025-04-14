@@ -7,7 +7,7 @@ const ContentFilterPanel = ({
     setReleaseYear,
   }) => (
     <div className="mt-6">
-      <div className="p-4 bg-[var(--panel-bg)] rounded-lg mb-4">
+      <div className="p-4 bg-[var(--panel-bg)] rounded-lg mb-2">
         <h3 className="text-lg font-semibold text-[var(--text-primary)]">Content</h3>
       </div>
       <div className="p-4 pt-0">

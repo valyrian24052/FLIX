@@ -21,12 +21,12 @@ const GenreFilterPanel = ({ genres, selectedGenres, setSelectedGenres }) => {
   };
 
   return (
-    <div className="mb-6">
-      <div className="p-4 bg-[var(--panel-bg)] rounded-lg mb-4">
+    <div className="mb-2">
+      <div className="p-4 bg-[var(--panel-bg)] rounded-lg mb-2">
         <h3 className="text-lg font-semibold text-[var(--text-primary)]">Genre</h3>
       </div>
       <div className="p-4 pt-0">
-        <div className="grid grid-cols-3 gap-2 mb-3">
+        <div className="grid grid-cols-3 gap-2 mb-2">
           {genres.map((genre) => (
             <div
               key={genre}
@@ -42,8 +42,8 @@ const GenreFilterPanel = ({ genres, selectedGenres, setSelectedGenres }) => {
           ))}
         </div>
         {selectedGenres.map((genre) => (
-          <div key={genre} className="mb-4">
-            <div className="flex justify-between mb-1">
+          <div key={genre} className="mb-2">
+            <div className="flex justify-between mb-2">
               <h4 className="text-sm font-semibold text-[var(--text-primary)]">{genre}</h4>
               <span className="text-[var(--text-secondary)]">{genreWeights[genre]}</span>
             </div>

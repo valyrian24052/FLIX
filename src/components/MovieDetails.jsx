@@ -11,8 +11,8 @@ const MovieDetails = () => (
       </div>
       <div className="flex mb-4">
         <span className="bg-[var(--chip-default)] text-sm px-3 py-1 rounded-full mr-2 text-[var(--text-primary)]">Drama 4.9</span>
-        <span className="bg-[var(--chip-default)] text-sm px-3 py-1 rounded-full mr-2 text-[var(--text-primary)]">Mystery</span>
-        <span className="bg-[var(--chip-default)] text-sm px-3 py-1 rounded-full text-[var(--text-primary)]">Thriller</span>
+        <span className="bg-[var(--chip-default)] text-sm px-3 py-1 rounded-full mr-2 text-[var(--text-primary)]">Mystery 8.1</span>
+        <span className="bg-[var(--chip-default)] text-sm px-3 py-1 rounded-full text-[var(--text-primary)]">Thriller 9.2</span>
       </div>
       <p className="text-[var(--text-secondary)] max-w-2xl">
         A psychological thriller about a detective who loses his hearing in an accident and must solve a high-profile case using his other senses, uncovering dark secrets about the victims and confronting his own past trauma in the process.
