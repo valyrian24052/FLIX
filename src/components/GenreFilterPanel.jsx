@@ -8,7 +8,7 @@ const GenreFilterPanel = ({ genres, selectedGenres, setSelectedGenres }) => {
   const handleGenreSelect = (genre) => {
     if (selectedGenres.includes(genre)) {
       setSelectedGenres(selectedGenres.filter((g) => g !== genre));
-    } else if (selectedGenres.length < 5) {
+    } else if (selectedGenres.length < 4) {
       setSelectedGenres([...selectedGenres, genre]);
     }
   };
