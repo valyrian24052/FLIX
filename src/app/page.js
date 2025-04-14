@@ -31,12 +31,12 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex min-h-screen bg-black text-white overflow-hidden">
+    <div className="flex min-h-screen bg-[var(--background)] text-[var(--foreground)] overflow-hidden">
       <div className="flex-1 relative">
         <BackgroundImage />
         <MovieDetails />
       </div>
-      <div className="w-[400px] bg-black p-6 shadow-md z-20 filter-panel">
+      <div className="w-[400px] bg-[var(--background)] p-6 shadow-md z-20 filter-panel">
         <GenreFilterPanel
           genres={genres}
           selectedGenres={selectedGenres}

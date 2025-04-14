@@ -22,8 +22,8 @@ const GenreFilterPanel = ({ genres, selectedGenres, setSelectedGenres }) => {
 
   return (
     <div className="mb-6">
-      <div className="p-4 bg-gray-800 rounded-lg mb-4">
-        <h3 className="text-lg font-semibold">Genre</h3>
+      <div className="p-4 bg-[var(--panel-bg)] rounded-lg mb-4">
+        <h3 className="text-lg font-semibold text-[var(--text-primary)]">Genre</h3>
       </div>
       <div className="p-4 pt-0">
         <div className="grid grid-cols-3 gap-2 mb-3">
@@ -31,10 +31,10 @@ const GenreFilterPanel = ({ genres, selectedGenres, setSelectedGenres }) => {
             <div
               key={genre}
               onClick={() => handleGenreSelect(genre)}
-              className={`cursor-pointer p-2 rounded-lg text-sm text-center transition-colors ${
+              className={`cursor-pointer p-2 rounded-lg text-sm text-center transition-colors text-[var(--text-primary)] ${
                 selectedGenres.includes(genre)
-                  ? "bg-gray-600"
-                  : "bg-gray-800 hover:bg-gray-700"
+                  ? "bg-[var(--chip-selected)]"
+                  : "bg-[var(--chip-default)] hover:bg-[var(--chip-hover)]"
               }`}
             >
               {genre}
@@ -44,8 +44,8 @@ const GenreFilterPanel = ({ genres, selectedGenres, setSelectedGenres }) => {
         {selectedGenres.map((genre) => (
           <div key={genre} className="mb-4">
             <div className="flex justify-between mb-1">
-              <h4 className="text-sm font-semibold">{genre}</h4>
-              <span className="text-gray-400">{genreWeights[genre]}</span>
+              <h4 className="text-sm font-semibold text-[var(--text-primary)]">{genre}</h4>
+              <span className="text-[var(--text-secondary)]">{genreWeights[genre]}</span>
             </div>
             <input
               type="range"
@@ -54,8 +54,34 @@ const GenreFilterPanel = ({ genres, selectedGenres, setSelectedGenres }) => {
               step="0.1"
               value={genreWeights[genre]}
               onChange={(e) => handleSliderChange(genre, e.target.value)}
-              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
+              className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-[var(--slider-bg)]"
+              style={{
+                accentColor: "var(--slider-thumb)",
+                borderRadius: "9999px",
+                WebkitAppearance: "none",
+              }}
             />
+            <style jsx>{`
+              input[type='range']::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                height: 12px;
+                width: 12px;
+                background: var(--slider-thumb);
+                border-radius: 50%;
+                border: 2px solid var(--slider-thumb-border);
+                cursor: pointer;
+                margin-top: -7px;
+              }
+              input[type='range']::-moz-range-thumb {
+                height: 8px;
+                width: 8px;
+                background: var(--slider-thumb);
+                border-radius: 50%;
+                border: 2px solid var(--slider-thumb-border);
+                cursor: pointer;
+              }
+            `}</style>
           </div>
         ))}
       </div>
