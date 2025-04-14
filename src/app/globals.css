@@ -8,7 +8,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   
-  --panel-bg: #1f2937;                 /* Tailwind gray-800 */
+  --panel-bg: #7397c9af;                 /* Tailwind gray-800 */
   --text-primary: #ffffff;             /* Tailwind white */
   --text-secondary: #d1d5db;           /* Tailwind gray-300 */
   --chip-default: rgba(255, 255, 255, 0.1);

@@ -50,6 +50,14 @@ export default function Home() {
           releaseYear={releaseYear}
           setReleaseYear={setReleaseYear}
         />
+                    <div className="flex justify-between gap-4 mt-4">
+              <button className="w-1/2 py-2 rounded-lg bg-[var(--chip-selected)] text-[var(--text-primary)] hover:bg-[var(--chip-hover)]">
+                Apply
+              </button>
+              <button className="w-1/2 py-2 rounded-lg bg-[var(--chip-default)] text-[var(--text-primary)] hover:bg-[var(--chip-hover)]">
+                Reset
+              </button>
+            </div>
       </div>
     </div>
   );
