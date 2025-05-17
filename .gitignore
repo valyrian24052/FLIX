@@ -41,4 +41,6 @@ yarn-error.log*
 next-env.d.ts
 
 
-/scripts
+tmdb_movies_20250517_185206.json
+
+__pycache__
